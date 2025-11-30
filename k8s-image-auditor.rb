@@ -5,7 +5,7 @@
 class K8sImageAuditor < Formula
   desc "Audits container images for architecture compatibility"
   homepage "https://github.com/PraveenPrabhuT/k8s-image-auditor"
-  version "1.1.4"
+  version "1.1.5"
   license "MIT"
 
   depends_on "awscli"
@@ -16,16 +16,16 @@ class K8sImageAuditor < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/PraveenPrabhuT/k8s-image-auditor/releases/download/v1.1.4/k8s-image-auditor_1.1.4_darwin_amd64.tar.gz"
-      sha256 "3a5000def11316bd6aab7544da6385ebe8899807a32befc625be6f1c89a8abb3"
+      url "https://github.com/PraveenPrabhuT/k8s-image-auditor/releases/download/v1.1.5/k8s-image-auditor_1.1.5_darwin_amd64.tar.gz"
+      sha256 "99da6069a0c286ad6499bac085e16aab952707b1863ee40125217c58dba1a758"
 
       def install
         system "make", "install", "PREFIX=#{prefix}"
       end
     end
     on_arm do
-      url "https://github.com/PraveenPrabhuT/k8s-image-auditor/releases/download/v1.1.4/k8s-image-auditor_1.1.4_darwin_arm64.tar.gz"
-      sha256 "3a5000def11316bd6aab7544da6385ebe8899807a32befc625be6f1c89a8abb3"
+      url "https://github.com/PraveenPrabhuT/k8s-image-auditor/releases/download/v1.1.5/k8s-image-auditor_1.1.5_darwin_arm64.tar.gz"
+      sha256 "99da6069a0c286ad6499bac085e16aab952707b1863ee40125217c58dba1a758"
 
       def install
         system "make", "install", "PREFIX=#{prefix}"
@@ -36,8 +36,8 @@ class K8sImageAuditor < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/PraveenPrabhuT/k8s-image-auditor/releases/download/v1.1.4/k8s-image-auditor_1.1.4_linux_amd64.tar.gz"
-        sha256 "3a5000def11316bd6aab7544da6385ebe8899807a32befc625be6f1c89a8abb3"
+        url "https://github.com/PraveenPrabhuT/k8s-image-auditor/releases/download/v1.1.5/k8s-image-auditor_1.1.5_linux_amd64.tar.gz"
+        sha256 "99da6069a0c286ad6499bac085e16aab952707b1863ee40125217c58dba1a758"
 
         def install
           system "make", "install", "PREFIX=#{prefix}"
@@ -46,8 +46,8 @@ class K8sImageAuditor < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/PraveenPrabhuT/k8s-image-auditor/releases/download/v1.1.4/k8s-image-auditor_1.1.4_linux_arm64.tar.gz"
-        sha256 "3a5000def11316bd6aab7544da6385ebe8899807a32befc625be6f1c89a8abb3"
+        url "https://github.com/PraveenPrabhuT/k8s-image-auditor/releases/download/v1.1.5/k8s-image-auditor_1.1.5_linux_arm64.tar.gz"
+        sha256 "99da6069a0c286ad6499bac085e16aab952707b1863ee40125217c58dba1a758"
 
         def install
           system "make", "install", "PREFIX=#{prefix}"
