@@ -2,7 +2,7 @@ class K8sImageAuditor < Formula
   desc "Audits container images for architecture compatibility (amd64/arm64)"
   homepage "https://github.com/PraveenPrabhuT/k8s-image-auditor"
   url "https://github.com/PraveenPrabhuT/k8s-image-auditor/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "247ef7a1a254c26953f4913b40158b3ce7d19ec2cd069f6c55a54f2f0c656fc8"
+  sha256 "3c12f49faa12d40512185a701cf6838bafadcb5d714f341dd48a716378c79646"
   license "MIT"
 
   # Dependencies required at runtime
