@@ -5,34 +5,38 @@
 class Vpn < Formula
   desc "The Byte-Smith's VPN Orchestrator"
   homepage "https://github.com/PraveenPrabhuT/qvpn"
-  version "0.1.3"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.1.3/vpn_0.1.3_darwin_amd64.tar.gz"
-      sha256 "0f67d008019597bbb08763e22d3eef5ba7c8e6473a8e96dc5290f2e6b52233da"
+      url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.2.1/vpn_0.2.1_darwin_amd64.tar.gz"
+      sha256 "cc4a2fccfd8fa69ecd6ef84f91b240d0a16ba614a2d61a0268744109437a3dc3"
 
       def install
         bin.install "vpn"
 
-        # Install completions if you generated them
-        # (We can add generation steps later, for now just binary)
-        # bash_completion.install "completions.bash" => "vpn"
-        # zsh_completion.install "completions.zsh" => "_vpn"
+        # Bash completions
+        bash_completion.install "completions.bash" => "vpn"
+        # Zsh completions (Must be renamed to _vpn)
+        zsh_completion.install "completions.zsh" => "_vpn"
+        # Fish completions
+        fish_completion.install "completions.fish" => "vpn.fish"
       end
     end
     on_arm do
-      url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.1.3/vpn_0.1.3_darwin_arm64.tar.gz"
-      sha256 "b164af5e9ef3c62ae6b00877a45fc3a4bf16376d238ab296f9e0341e9c343243"
+      url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.2.1/vpn_0.2.1_darwin_arm64.tar.gz"
+      sha256 "96b3c8979471e5ef5158a6b6b914a182340899d25b4be61934c51063ba1add45"
 
       def install
         bin.install "vpn"
 
-        # Install completions if you generated them
-        # (We can add generation steps later, for now just binary)
-        # bash_completion.install "completions.bash" => "vpn"
-        # zsh_completion.install "completions.zsh" => "_vpn"
+        # Bash completions
+        bash_completion.install "completions.bash" => "vpn"
+        # Zsh completions (Must be renamed to _vpn)
+        zsh_completion.install "completions.zsh" => "_vpn"
+        # Fish completions
+        fish_completion.install "completions.fish" => "vpn.fish"
       end
     end
   end
@@ -40,31 +44,35 @@ class Vpn < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.1.3/vpn_0.1.3_linux_amd64.tar.gz"
-        sha256 "cc23be2db8ec13c1fb93419b1b8cd1de34f7a0218cdc92a50119005567b7933f"
+        url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.2.1/vpn_0.2.1_linux_amd64.tar.gz"
+        sha256 "c27dd21785a50caefaf9afe352db724c7433d6d8e1d8e50c494e02873c98cbb0"
 
         def install
           bin.install "vpn"
 
-          # Install completions if you generated them
-          # (We can add generation steps later, for now just binary)
-          # bash_completion.install "completions.bash" => "vpn"
-          # zsh_completion.install "completions.zsh" => "_vpn"
+          # Bash completions
+          bash_completion.install "completions.bash" => "vpn"
+          # Zsh completions (Must be renamed to _vpn)
+          zsh_completion.install "completions.zsh" => "_vpn"
+          # Fish completions
+          fish_completion.install "completions.fish" => "vpn.fish"
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.1.3/vpn_0.1.3_linux_arm64.tar.gz"
-        sha256 "5b2580e2c23eddc96ef51d99638368b0986083ce170b044794f83f420d833c7a"
+        url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.2.1/vpn_0.2.1_linux_arm64.tar.gz"
+        sha256 "626c08f18eab9aafc10101240e43792e7ebcd77ba82becc47734f5a55d9f0c9b"
 
         def install
           bin.install "vpn"
 
-          # Install completions if you generated them
-          # (We can add generation steps later, for now just binary)
-          # bash_completion.install "completions.bash" => "vpn"
-          # zsh_completion.install "completions.zsh" => "_vpn"
+          # Bash completions
+          bash_completion.install "completions.bash" => "vpn"
+          # Zsh completions (Must be renamed to _vpn)
+          zsh_completion.install "completions.zsh" => "_vpn"
+          # Fish completions
+          fish_completion.install "completions.fish" => "vpn.fish"
         end
       end
     end
