@@ -5,13 +5,13 @@
 class GrafanaConnect < Formula
   desc "Context-aware Grafana dashboard launcher for Kubernetes"
   homepage "https://github.com/PraveenPrabhuT/grafana-connect"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/PraveenPrabhuT/grafana-connect/releases/download/v0.4.0/grafana-connect_0.4.0_darwin_amd64.tar.gz"
-      sha256 "a1e077c29516bb0b0406b4419718385d31d70be26cb5719a94508e44a07f326a"
+      url "https://github.com/PraveenPrabhuT/grafana-connect/releases/download/v0.5.0/grafana-connect_0.5.0_darwin_amd64.tar.gz"
+      sha256 "9d28b7d5adcfbb8869eb4247ccf17efe20adce173367b7f7f4687f7f502f1001"
 
       def install
         bin.install "grafana-connect"
@@ -23,8 +23,8 @@ class GrafanaConnect < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/PraveenPrabhuT/grafana-connect/releases/download/v0.4.0/grafana-connect_0.4.0_darwin_arm64.tar.gz"
-      sha256 "68a0fc17eae695dc5a2b63814762228760ac91c55ef765b5d58e561986d72ac9"
+      url "https://github.com/PraveenPrabhuT/grafana-connect/releases/download/v0.5.0/grafana-connect_0.5.0_darwin_arm64.tar.gz"
+      sha256 "62fdae86306b5e16b7f82c1b6df720f7e6f6311ae423ace5a9bb41e812d62302"
 
       def install
         bin.install "grafana-connect"
@@ -39,8 +39,8 @@ class GrafanaConnect < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PraveenPrabhuT/grafana-connect/releases/download/v0.4.0/grafana-connect_0.4.0_linux_amd64.tar.gz"
-      sha256 "4433fee539744475aa71739c7c232366778ea35895571b68a984c85dad2b61a6"
+      url "https://github.com/PraveenPrabhuT/grafana-connect/releases/download/v0.5.0/grafana-connect_0.5.0_linux_amd64.tar.gz"
+      sha256 "36b190dd52cde355d5fa92c1894c15fae22e96eb53e54bbac5942199706a6d07"
       def install
         bin.install "grafana-connect"
 
@@ -51,8 +51,8 @@ class GrafanaConnect < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PraveenPrabhuT/grafana-connect/releases/download/v0.4.0/grafana-connect_0.4.0_linux_arm64.tar.gz"
-      sha256 "946bf62bb220f0c189df07dd929d5357085468596c97ac63eda80cdfd73e12eb"
+      url "https://github.com/PraveenPrabhuT/grafana-connect/releases/download/v0.5.0/grafana-connect_0.5.0_linux_arm64.tar.gz"
+      sha256 "0d54f90aadc4465f2350531c5907000cfb0f74ccb41da010426a59511cc41fdd"
       def install
         bin.install "grafana-connect"
 
