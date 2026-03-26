@@ -5,13 +5,13 @@
 class Rds < Formula
   desc "Context-aware AWS RDS toolkit with native Go fallback"
   homepage "https://github.com/PraveenPrabhuT/rds"
-  version "0.4.2"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/PraveenPrabhuT/rds/releases/download/v0.4.2/rds_0.4.2_darwin_amd64.tar.gz"
-      sha256 "48a669b7abd858e548cc0945c507ad73913e19d5511222e0055f6499f1b74cc1"
+      url "https://github.com/PraveenPrabhuT/rds/releases/download/v0.5.1/rds_0.5.1_darwin_amd64.tar.gz"
+      sha256 "8e7d9c67a159aba9be21c4b8dba2260f1e1578fb24b3787066ee005ad3d9c1cc"
 
       define_method(:install) do
         bin.install "rds"
@@ -23,8 +23,8 @@ class Rds < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/PraveenPrabhuT/rds/releases/download/v0.4.2/rds_0.4.2_darwin_arm64.tar.gz"
-      sha256 "2e1453d8ed6bf050a19927731609b91dc213773ba0bf3d37ccc474233f09c214"
+      url "https://github.com/PraveenPrabhuT/rds/releases/download/v0.5.1/rds_0.5.1_darwin_arm64.tar.gz"
+      sha256 "df48207d4e27e94591a545fa6fb436348212f53653c0ad4d2501ff171909c97e"
 
       define_method(:install) do
         bin.install "rds"
@@ -39,8 +39,8 @@ class Rds < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PraveenPrabhuT/rds/releases/download/v0.4.2/rds_0.4.2_linux_amd64.tar.gz"
-      sha256 "9337842010ffa7ef61ea5a5dc0f43174a38c6b42ccc113bf7f55ab89a9f5f6e6"
+      url "https://github.com/PraveenPrabhuT/rds/releases/download/v0.5.1/rds_0.5.1_linux_amd64.tar.gz"
+      sha256 "cbb7cf3a335b9c9ce39cb5ca572fb4d777b3fd2fd406993c1f663fa5272bce7e"
       define_method(:install) do
         bin.install "rds"
 
@@ -51,8 +51,8 @@ class Rds < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PraveenPrabhuT/rds/releases/download/v0.4.2/rds_0.4.2_linux_arm64.tar.gz"
-      sha256 "d9e6dae4298e44b03a2b67666cfb946a154cbe9d0dabd1181b6df3d24b183be4"
+      url "https://github.com/PraveenPrabhuT/rds/releases/download/v0.5.1/rds_0.5.1_linux_arm64.tar.gz"
+      sha256 "3849ec045dc414bd523645c248b2d4ae7f5c0d40de1877e2c596f993479d145a"
       define_method(:install) do
         bin.install "rds"
 
