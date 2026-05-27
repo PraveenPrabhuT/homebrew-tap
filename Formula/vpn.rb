@@ -5,13 +5,13 @@
 class Vpn < Formula
   desc "The Byte-Smith's VPN Orchestrator"
   homepage "https://github.com/PraveenPrabhuT/qvpn"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.3.0/vpn_0.3.0_darwin_amd64.tar.gz"
-      sha256 "7d2225e5ff816095a6f92bd57a926e2da64ac6a020cfbfd9a8d64d423336eb89"
+      url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.4.0/vpn_0.4.0_darwin_amd64.tar.gz"
+      sha256 "e068b32db62501491a250e4e6fc20428949d9776dcef8d30997d992d1a40dfaf"
 
       def install
         bin.install "vpn"
@@ -25,8 +25,8 @@ class Vpn < Formula
       end
     end
     on_arm do
-      url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.3.0/vpn_0.3.0_darwin_arm64.tar.gz"
-      sha256 "a894fd2590d01c166a5252f60dc0b6f306502cf1fd6f4625cb8e04b7cf5388ce"
+      url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.4.0/vpn_0.4.0_darwin_arm64.tar.gz"
+      sha256 "b0c11c2de190a8e68cf3f81d2748aa44c7c26597bd3c1f00c550c57d2a04366c"
 
       def install
         bin.install "vpn"
@@ -44,8 +44,8 @@ class Vpn < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.3.0/vpn_0.3.0_linux_amd64.tar.gz"
-        sha256 "b982597e059cf760c017506391ad4d7872bc3c157c3e04961042031d016248e3"
+        url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.4.0/vpn_0.4.0_linux_amd64.tar.gz"
+        sha256 "56ff59feb957e63533db394339ff7735074335ec4fb4fa4cd03ad09118ff4ce4"
 
         def install
           bin.install "vpn"
@@ -61,8 +61,8 @@ class Vpn < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.3.0/vpn_0.3.0_linux_arm64.tar.gz"
-        sha256 "44d6351f8b32ca556b4a3b011cc002962acf119dbd22c433f638d848f46b9cca"
+        url "https://github.com/PraveenPrabhuT/qvpn/releases/download/v0.4.0/vpn_0.4.0_linux_arm64.tar.gz"
+        sha256 "8856124b78f389dfec61d957a1845247743950d5ca49c04dc9a6d2218ef47402"
 
         def install
           bin.install "vpn"
