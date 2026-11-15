@@ -5,13 +5,13 @@
 class Rds < Formula
   desc "Context-aware AWS RDS toolkit with native Go fallback"
   homepage "https://github.com/PraveenPrabhuT/rds"
-  version "0.10.0"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/PraveenPrabhuT/rds/releases/download/v0.10.0/rds_0.10.0_darwin_amd64.tar.gz"
-      sha256 "0a28f962a3db04e47b2d770424ac070ed38434e6f3aa9d28d8db7e2da2c6e679"
+      url "https://github.com/PraveenPrabhuT/rds/releases/download/v1.0.0/rds_1.0.0_darwin_amd64.tar.gz"
+      sha256 "e17a066784d7a357077a3762dd1e9147249563eea10a183cfd643c0c955c84a2"
 
       define_method(:install) do
         bin.install "rds"
@@ -21,11 +21,14 @@ class Rds < Formula
         bash_completion.install "completions.bash" => "rds"
         zsh_completion.install "completions.zsh" => "_rds"
         fish_completion.install "completions.fish" => "rds.fish"
+        bash_completion.install "completions-mongoctl.bash" => "mongoctl"
+        zsh_completion.install "completions-mongoctl.zsh" => "_mongoctl"
+        fish_completion.install "completions-mongoctl.fish" => "mongoctl.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/PraveenPrabhuT/rds/releases/download/v0.10.0/rds_0.10.0_darwin_arm64.tar.gz"
-      sha256 "4de3a218a8f327bfde7db3f6a2981ce22dd2142691f418345fd49db2adb823a4"
+      url "https://github.com/PraveenPrabhuT/rds/releases/download/v1.0.0/rds_1.0.0_darwin_arm64.tar.gz"
+      sha256 "8a16fb7947488bfb326d06ea949102dbc0c6f8fcbf288a4183566511fd13209a"
 
       define_method(:install) do
         bin.install "rds"
@@ -35,14 +38,17 @@ class Rds < Formula
         bash_completion.install "completions.bash" => "rds"
         zsh_completion.install "completions.zsh" => "_rds"
         fish_completion.install "completions.fish" => "rds.fish"
+        bash_completion.install "completions-mongoctl.bash" => "mongoctl"
+        zsh_completion.install "completions-mongoctl.zsh" => "_mongoctl"
+        fish_completion.install "completions-mongoctl.fish" => "mongoctl.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PraveenPrabhuT/rds/releases/download/v0.10.0/rds_0.10.0_linux_amd64.tar.gz"
-      sha256 "cdea68c1f1b0983e7fea2a7b25b3589aefbdbc912ff38aec0a02922187745ecc"
+      url "https://github.com/PraveenPrabhuT/rds/releases/download/v1.0.0/rds_1.0.0_linux_amd64.tar.gz"
+      sha256 "d1a42781a0320071c4447142aeaa934fc5a78f1637f2ea0f3c8b53baf4f37d3d"
       define_method(:install) do
         bin.install "rds"
         bin.install "mongoctl"
@@ -51,11 +57,14 @@ class Rds < Formula
         bash_completion.install "completions.bash" => "rds"
         zsh_completion.install "completions.zsh" => "_rds"
         fish_completion.install "completions.fish" => "rds.fish"
+        bash_completion.install "completions-mongoctl.bash" => "mongoctl"
+        zsh_completion.install "completions-mongoctl.zsh" => "_mongoctl"
+        fish_completion.install "completions-mongoctl.fish" => "mongoctl.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/PraveenPrabhuT/rds/releases/download/v0.10.0/rds_0.10.0_linux_arm64.tar.gz"
-      sha256 "9726f82809dabf3c819a0bc5ba9a93bc76b8a879863ac8c80c680279b050ce16"
+      url "https://github.com/PraveenPrabhuT/rds/releases/download/v1.0.0/rds_1.0.0_linux_arm64.tar.gz"
+      sha256 "e3ba17778ceaf605a119a5d9b1d125e0e8d2c6e7fb8d81576367533926771112"
       define_method(:install) do
         bin.install "rds"
         bin.install "mongoctl"
@@ -64,11 +73,15 @@ class Rds < Formula
         bash_completion.install "completions.bash" => "rds"
         zsh_completion.install "completions.zsh" => "_rds"
         fish_completion.install "completions.fish" => "rds.fish"
+        bash_completion.install "completions-mongoctl.bash" => "mongoctl"
+        zsh_completion.install "completions-mongoctl.zsh" => "_mongoctl"
+        fish_completion.install "completions-mongoctl.fish" => "mongoctl.fish"
       end
     end
   end
 
   test do
     system "#{bin}/rds --version"
+    system "#{bin}/mongoctl --version"
   end
 end
